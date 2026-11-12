@@ -1,0 +1,4 @@
+if (requireLogin()) {
+  const orders=getOrders();
+  layout(`<main class="container py-5"><div class="mb-4"><span class="eyebrow">Activity</span><h1>Orders</h1><p class="text-muted">Your simulated transaction history.</p></div><div class="card-panel"><div class="table-responsive"><table class="table align-middle"><thead><tr><th>Date</th><th>Stock</th><th>Type</th><th>Quantity</th><th>Price</th><th>Total</th><th>Status</th></tr></thead><tbody>${orders.map(o=>`<tr><td>${new Date(o.date).toLocaleString()}</td><td><b>${stockById(o.stockId).symbol}</b><small>${stockById(o.stockId).name}</small></td><td><span class="type-pill ${o.type.toLowerCase()}">${o.type}</span></td><td>${o.quantity}</td><td>${money(o.price)}</td><td>${money(o.total)}</td><td><span class="status">${o.status}</span></td></tr>`).join("") || `<tr><td colspan="7" class="empty">No orders have been placed.</td></tr>`}</tbody></table></div></div></main>`, "orders");
+}

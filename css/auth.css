@@ -1,0 +1,6 @@
+.auth-page{min-height:100vh;background:linear-gradient(135deg,#e4f0ea,#f5f7f6);padding:30px 20px}
+.auth-brand{max-width:480px;margin:0 auto 45px}
+.auth-card{max-width:480px;margin:auto;background:#fff;border-radius:22px;padding:40px;box-shadow:0 20px 50px #174d3b18}
+.auth-card h1{font-size:2rem;color:var(--primary)}
+.form-control,.form-select{padding:.75rem .9rem;border-color:#dbe5df;border-radius:9px}
+.form-control:focus,.form-select:focus{border-color:var(--success);box-shadow:0 0 0 .2rem #16a36a22}
